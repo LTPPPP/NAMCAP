@@ -247,20 +247,22 @@ public class GamePacMan extends Canvas implements Runnable, KeyListener {
                 break;
             case GAME_MENU:// Display the menu of game
                 // Draw the image on the screen
-                g.drawImage(Toolkit.getDefaultToolkit().getImage("E:/GAME_CODE/GAME_JAVA/GAME_PACMAN/GamePacMan/src/sprites/BG_MAIN.jpg"), 0, 0, WIDTH, HEIGHT, null);
+                g.drawImage(Toolkit.getDefaultToolkit().getImage("IMG_PATH"), 0, 0, WIDTH, HEIGHT, null);
                 break;
             case GAME_HOWTOPLAY:// Display the guide of the player
-                g.drawImage(Toolkit.getDefaultToolkit().getImage("E:/GAME_CODE/GAME_JAVA/GAME_PACMAN/GamePacMan/src/sprites/BG_HOWTOPLAY.jpg"), 0, 0, WIDTH, HEIGHT, null);
+                g.drawImage(Toolkit.getDefaultToolkit().getImage("IMG_PATH"), 0, 0, WIDTH, HEIGHT, null);
                 break;
             case GAME_ABOUT:// Display the information of DEV
-                g.drawImage(Toolkit.getDefaultToolkit().getImage("E:/GAME_CODE/GAME_JAVA/GAME_PACMAN/GamePacMan/src/sprites/BG_ABOUT.jpg"), 0, 0, WIDTH, HEIGHT, null);
+                g.drawImage(Toolkit.getDefaultToolkit().getImage("IMG_PATH"), 0, 0, WIDTH, HEIGHT, null);
                 break;
             case GAME_QUIT://Display the frame thank you player then quit the game
                 if (quitStartTime == 0) {
                     quitStartTime = System.currentTimeMillis();
                 }
-                g.drawImage(Toolkit.getDefaultToolkit().getImage("E:/GAME_CODE/GAME_JAVA/GAME_PACMAN/GamePacMan/src/sprites/BG_QUIT.jpg"), 0, 0, WIDTH, HEIGHT, null);
+                g.drawImage(Toolkit.getDefaultToolkit().getImage("IMG_PATH"), 0, 0, WIDTH, HEIGHT, null);
                 // Check if 10 seconds have elapsed
+                GameStatistics stats = new GameStatistics();
+                stats.writeFile(); // Save statistics to file
                 if (System.currentTimeMillis() - quitStartTime >= 5000) {
                     // If 10 seconds have elapsed, exit the game
                     System.exit(0);
@@ -295,7 +297,7 @@ public class GamePacMan extends Canvas implements Runnable, KeyListener {
                 }
                 break;
             case GAME_WIN:// Display the frame when the player win the game
-                g.drawImage(Toolkit.getDefaultToolkit().getImage("E:/GAME_CODE/GAME_JAVA/GAME_PACMAN/GamePacMan/src/sprites/BG_WIN.jpg"), 0, 0, WIDTH, HEIGHT, null);
+                g.drawImage(Toolkit.getDefaultToolkit().getImage("IMG_PATH"), 0, 0, WIDTH, HEIGHT, null);
                 g.setFont(new Font(Font.DIALOG, Font.BOLD, 40));
                 g.setColor(Color.GREEN);
                 g.drawString("GGWP_EZ", xs - 50, ys);
@@ -304,7 +306,7 @@ public class GamePacMan extends Canvas implements Runnable, KeyListener {
                 g.drawString("Your point : " + totalPoint + "pt", xs - 100, ys + 120);
                 break;
             case GAME_OVER:// Display the frame when the player lose the game
-                g.drawImage(Toolkit.getDefaultToolkit().getImage("E:/GAME_CODE/GAME_JAVA/GAME_PACMAN/GamePacMan/src/sprites/BG_LOSE.jpg"), 0, 0, WIDTH, HEIGHT, null);
+                g.drawImage(Toolkit.getDefaultToolkit().getImage("IMG_PATH"), 0, 0, WIDTH, HEIGHT, null);
                 g.setColor(Color.red);
                 g.setFont(new Font(Font.DIALOG, Font.BOLD, 40));
                 g.drawString("TOO NOOB 🤡", xs - 50, ys);
@@ -327,7 +329,7 @@ public class GamePacMan extends Canvas implements Runnable, KeyListener {
                 });
                 g.setColor(Color.yellow);
                 g.setFont(new Font(Font.DIALOG, Font.BOLD, 50));
-                g.drawImage(Toolkit.getDefaultToolkit().getImage("E:/GAME_CODE/GAME_JAVA/GAME_PACMAN/GamePacMan/src/sprites/BG_STAT.jpg"), 0, 0, WIDTH, HEIGHT, null);
+                g.drawImage(Toolkit.getDefaultToolkit().getImage("IMG_PATH"), 0, 0, WIDTH, HEIGHT, null);
                 if (listTimeTop.size() <= 5) {
                     for (int i = 0; i < listTimeTop.size(); i++) {
                         g.drawString("TOP" + (i + 1) + " : " + listTimeTop.get(i).getPoint() + " pt__" + listTimeWin.get(i).getTime() + " s ", 50, a += 70);

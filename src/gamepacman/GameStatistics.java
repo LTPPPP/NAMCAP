@@ -25,7 +25,7 @@ public class GameStatistics {
             out.write("--- STATISTICS OF PLAYER ---(SECOND)\n");
             for (int i = 0; i < listTimeTotal.size(); i++) {
                 String ns = "";
-                out.write("Player no. " + (i + 1) + " : " + listTotalPoint.get(i) + "pt - " + (ns += listTimeTotal.get(i)) + "   second\n");
+                out.write("Player no. " + (i + 1) + " :  point = " + listTotalPoint.get(i) + "pt __ time = " + (ns += listTimeTotal.get(i)));
             }
             out.close();
         } catch (IOException e) {
