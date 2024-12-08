@@ -12,11 +12,11 @@ NAMCAP is an inverted version of the classic game Pacman, developed using Java S
 
 ## Tech Stack
 
-- **Java**: ![Java](https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png) The core programming language used for game logic and functionality.
-- **Java Swing**: ![Java Swing](https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png) Used for building the graphical user interface.
-- **Java AWT**: ![Java AWT](https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png) Utilized for handling graphics and rendering.
-- **Maven**: ![Maven](https://img.icons8.com/color/48/000000/apache-maven.png) For project management and dependency management.
-- **Git**: ![Git](https://img.icons8.com/color/48/000000/git.png) Version control system for tracking changes and collaboration.
+- **Java**: The core programming language used for game logic and functionality.
+- **Java Swing**: Used for building the graphical user interface.
+- **Java AWT**: Utilized for handling graphics and rendering.
+- **Maven**: For project management and dependency management.
+- **Git**: Version control system for tracking changes and collaboration.
 
 ## Installation
 
